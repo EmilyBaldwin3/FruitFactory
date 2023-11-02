@@ -8,7 +8,7 @@ public class Fruit {
     public boolean isRipe;
     public int numberBush;
     public void printInfo(){
-        System.out.println("The fruit is: " + color);
+        System.out.println("The fruit color is: " + color);
         System.out.println("The shape is " +shape);
         System.out.println("The number of seeds is " + numberSeeds);
         System.out.println(isRipe);
@@ -21,7 +21,11 @@ public class Fruit {
         System.out.println("The number of fruits on a bush " + numberBush);
     }
    // constructor for Fruit Class
-    public Fruit(){
-
+    public Fruit(String paramColor, int paramNumberSeeds, String paramShape, boolean paramisRipe){
+        color=paramColor;
+        numberSeeds = paramNumberSeeds;
+        shape = paramShape;
+        isRipe = paramisRipe;
+        numberBush = (int)(Math.random()*100); //the (int) forces this number to be an integer "casting"
     }
 }
